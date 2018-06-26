@@ -23,13 +23,18 @@
 
     <properties>
         <!-- Use the latest version whenever possible. -->
+        <lombok.version>1.16.10</lombok.version>
         <jackson.version>2.9.5</jackson.version>
+        <sparkjava.spark-core.version>2.7.1</sparkjava.spark-core.version>
+        <sql2o.version>1.5.4</sql2o.version>
+        <mysql.mysql-connector-java.version>8.0.11</mysql.mysql-connector-java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -37,8 +42,6 @@
             <version>${jackson.version}</version>
         </dependency>
         <dependency>
-            <!-- Note: core-annotations version x.y.0 is generally compatible with
-                 (identical to) version x.y.1, x.y.2, etc. -->
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>${jackson.version}</version>
@@ -47,6 +50,21 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>${sparkjava.spark-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sql2o</groupId>
+            <artifactId>sql2o</artifactId>
+            <version>${sql2o.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.mysql-connector-java.version}</version>
         </dependency>
     </dependencies>
 
